@@ -18,8 +18,7 @@ function selectGalleryEl(evt) {
   if (evt.target.nodeName !== "IMG") {
     return;
   }
-  //   console.log(evt.target.dataset.source);
-  const instance = basicLightbox.create(
+  const modalWindowEl = basicLightbox.create(
     `
     <img src="${evt.target.dataset.source}" width="800" height="600 loading = "lazy" class = "lazyload" style ="border-radius: 7%">
 `,
@@ -44,5 +43,5 @@ function selectGalleryEl(evt) {
     }
   );
 
-  instance.show();
+  modalWindowEl.show();
 }
