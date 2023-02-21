@@ -9,7 +9,15 @@ function createImageEl(images) {
   return images
     .map(
       ({ preview, original, description }) =>
-        `<div class = "gallery__item" style = "border-radius:5%; overflow:hidden"><a class="gallery__link"><img class = "gallery__image lazyload" src = "${preview}" data-source = "${original}" alt = "${description}" loading = "lazy" "></a></div>`
+        `<div class = "gallery__item" style = "border-radius:3%">
+        <a class="gallery__link" style= "border-radius:3%">
+        <img 
+        class = "gallery__image lazyload" 
+        src = "${preview}" data-source = "${original}" 
+        alt = "${description}" 
+        loading = "lazy" 
+        style = "border-radius:3%;">
+        </a></div>`
     )
     .join("");
 }
