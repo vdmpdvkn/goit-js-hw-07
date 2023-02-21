@@ -27,7 +27,7 @@ function selectGalleryEl(evt) {
       onShow() {
         window.addEventListener("keydown", (evt) => {
           if (evt.code === "Escape") {
-            instance.close();
+            modalWindowEl.close();
           }
         });
         document.body.style.overflow = "hidden";
@@ -35,7 +35,7 @@ function selectGalleryEl(evt) {
       onClose() {
         window.removeEventListener("keydown", (evt) => {
           if (evt.code === "Escape") {
-            instance.close();
+            modalWindowEl.close();
           }
         });
         document.body.style.overflow = "";
